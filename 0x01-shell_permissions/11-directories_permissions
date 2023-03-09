@@ -1,11 +1,2 @@
 #!/bin/bash
-
-# Loop through all subdirectories in the current directory
-for dir in */; do
-    # Check if the directory is a directory and not a file
-    if [ -d "$dir" ]; then
-        # Add execute permission to the directory for owner, group owner, and others
-        chmod a+x "$dir"
-    fi
-done
-
+find . -type d -exec chmod o+x {} \
